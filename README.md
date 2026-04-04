@@ -40,7 +40,14 @@ Question 1:
 
 Question2:
 
-
+OPT(i, j) = max value of common subsequence of strings A = [1...i] and B = [1...j]  
+Base Cases:  
+A is an empty string = OPT(0, j)  
+B is an empty string = OPT(i, 0)  
+/n
+Case 1: A[i] == B[j]  
+OPT(i, j) = OPT(i-1, j-1) + val(A[i])  
+Case 2
 
 Question 3:
 
