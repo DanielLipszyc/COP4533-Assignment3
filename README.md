@@ -50,4 +50,8 @@ OPT(i, j) = OPT(i-1, j-1) + val(A[i])
 Case 2
 
 Question 3:
-
+```bash
+subsequence(A, B, v):
+  m = length of A
+  n = length of B
+```
