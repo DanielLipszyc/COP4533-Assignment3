@@ -85,13 +85,13 @@ subsequence(A, B, v):
   i = m
   j = n
   while i > 0 and j > 0:
-    if A[i-1] == B[j-1]:
+    if A[i] == B[j]
       length += 1
       i -= 1
       j -= 1
-    elif table[i-1][j] >= table[i][j-1]:
+    elif OPT(i-1, j) >= OPT(i, j-1)
       i -= 1
-    else:
+    else
       j -= 1
 
   return length
