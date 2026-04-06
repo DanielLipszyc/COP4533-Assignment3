@@ -72,6 +72,7 @@ subsequence(A, B, v):
   OPT(i, 0) = 0 for i = 0 to m
   OPT(0, j) = 0 for j = 0 to n
 
+  // store results in 2D array
   for i = 1 to m
     for j = 1 to n
       if A[i] == B[j]
@@ -79,6 +80,19 @@ subsequence(A, B, v):
       else
         OPT(i, j) = max(OPT(i-1, j), OPT(i, j-1))
 
-  return OPT(m, n)
+  length = 0
+  i = m
+  j = n
+  while i > 0 and j > 0:
+    if A[i-1] == B[j-1]:
+    length += 1
+      i -= 1
+      j -= 1
+    elif table[i-1][j] >= table[i][j-1]:
+      i -= 1
+    else:
+      j -= 1
+
+  return length
 ```
 Runtime: O(m*n)
