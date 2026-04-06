@@ -55,6 +55,7 @@ OPT(i, j) = max value of common subsequence of strings A = [1...i] and B = [1...
 #### Base Cases:  
 A is an empty string = OPT(0, j) = 0  
 B is an empty string = OPT(i, 0) = 0  
+Both empty = OPT(0, 0) = 0  
 
 #### Case 1: A[i] equal to B[j]  
 OPT(i, j) = OPT(i-1, j-1) + val(A[i])  
