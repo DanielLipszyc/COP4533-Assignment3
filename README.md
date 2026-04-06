@@ -47,7 +47,7 @@ longest common sequence
 ### Written Component
 ### Question 1: 
 
-
+![Graph](data/chart.png)
 
 ### Question 2:
 
