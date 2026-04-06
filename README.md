@@ -53,13 +53,15 @@ longest common sequence
 
 OPT(i, j) = max value of common subsequence of strings A = [1...i] and B = [1...j]  
 #### Base Cases:  
-A is an empty string = OPT(0, j)  
-B is an empty string = OPT(i, 0)  
+A is an empty string = OPT(0, j) = 0  
+B is an empty string = OPT(i, 0) = 0  
 
 #### Case 1: A[i] equal to B[j]  
 OPT(i, j) = OPT(i-1, j-1) + val(A[i])  
 #### Case 2: A[i] NOT equal to B[j]  
-OPT(i, j) = max(OPT(i-1, j), OPT(i, j-1))
+OPT(i, j) = max(OPT(i-1, j), OPT(i, j-1))  
+#### Correctness:  
+My recurrence is correct because: when the characters are equal to eachother, adding them to the subsequence only adds value, it won't break the sequence. When they are not equal, I can't use both characters, so I either skip A[i] giving OPT(i-1, j), or skip B[j] giving OPT(i, j-1), and take whichever is bigger. The solution to the problem is OPT(m, n).
 
 
 ### Question 3:
