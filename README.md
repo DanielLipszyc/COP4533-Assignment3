@@ -58,7 +58,7 @@ B is an empty string = OPT(i, 0)
 
 ### Case 1: A[i] equal to B[j]  
 OPT(i, j) = OPT(i-1, j-1) + val(A[i])  
-### Case 2: A[i] NOT equal to B[j]  
+#### Case 2: A[i] NOT equal to B[j]  
 OPT(i, j) = max(OPT(i-1, j), OPT(i, j-1))
 
 
