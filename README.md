@@ -45,24 +45,24 @@ longest common sequence
 
 
 ### Written Component
-Question 1: 
+### Question 1: 
 
 
 
-Question2:
+### Question 2:
 
 OPT(i, j) = max value of common subsequence of strings A = [1...i] and B = [1...j]  
-Base Cases:  
+#### Base Cases:  
 A is an empty string = OPT(0, j)  
 B is an empty string = OPT(i, 0)  
 
-### Case 1: A[i] equal to B[j]  
+#### Case 1: A[i] equal to B[j]  
 OPT(i, j) = OPT(i-1, j-1) + val(A[i])  
 #### Case 2: A[i] NOT equal to B[j]  
 OPT(i, j) = max(OPT(i-1, j), OPT(i, j-1))
 
 
-Question 3:
+### Question 3:
 ```bash
 subsequence(A, B, v):
   m = length of A
