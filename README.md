@@ -85,7 +85,7 @@ subsequence(A, B, v):
   j = n
   while i > 0 and j > 0:
     if A[i-1] == B[j-1]:
-    length += 1
+      length += 1
       i -= 1
       j -= 1
     elif table[i-1][j] >= table[i][j-1]:
