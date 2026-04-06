@@ -44,7 +44,7 @@ OPT(i, j) = max value of common subsequence of strings A = [1...i] and B = [1...
 Base Cases:  
 A is an empty string = OPT(0, j)  
 B is an empty string = OPT(i, 0)  
-/n
+
 Case 1: A[i] == B[j]  
 OPT(i, j) = OPT(i-1, j-1) + val(A[i])  
 Case 2
@@ -54,4 +54,16 @@ Question 3:
 subsequence(A, B, v):
   m = length of A
   n = length of B
+  OPT(i, 0) = 0 for i = 0 to m
+  OPT(0, j) = 0 for j = 0 to n
+
+  for i = 1 to m
+    for j = 1 to n
+      if A[i] == B[j]
+        OPT(i, j) = OPT(i-1, j-1) + v(A[i])
+      else
+        OPT(i, j) = max(OPT(i-1, j), OPT(i, j-1))
+
+  return OPT(m, n)
 ```
+Runtime: O(m*n)
