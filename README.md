@@ -23,13 +23,24 @@ python3 src/subsequence.py tests/example.in > tests/example.out
 ### Assumptions
 Input file format is:
 ```bash
-a
+K  
+x1 v1  
+x2 v2
+...
+xK vK
+A
+B  
 ```
+K = number of characters in the alphabet  
+x# v# = letter/character and corresponding value
+A = first string
+B = second string
 
 
 Output format will be:
 ```bash
-a
+Val(longest common sequence)  
+longest common sequence  
 ```
 
 
