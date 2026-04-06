@@ -96,4 +96,5 @@ subsequence(A, B, v):
 
   return length
 ```
-Runtime: O(m*n)
+Runtime: O(m*n)  
+This is because there are nested loops that go from 1 to m and 1 to n. Operations in those loops are constant time.  
